@@ -7,13 +7,21 @@
 :root {
   --color-green-medium: #8fe2e4;
   --color-purple: #632ce7;
-  --color-gray: #2c2c2ce5;
+  --color-gray: #eaebed;
   --color-gray-mediem: #f8f9fa;
-  --color-yellow: #fac32c;
+  --color-yellow: #dfff2b;
   --color-green: #4DC5B3;
+  --color-blue: #3b4fff;
+  --color-red: #ff3838;
  }
 
  body{
+   display: flex;
+   background-color: var(--color-gray);
+   height: 100vh;
+ }
+
+ .login__user{
   min-width: 100%;
   min-height: 100%;
   background-image: url(../img/samuel-scrimshaw-76649-unsplash.jpg);
@@ -33,7 +41,7 @@
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    margin: 1rem 0;
    font-size: 2.5rem;
-   color: #dfff2b;
+   color: var(--color-yellow);
    text-align: center;
    font-weight: bold;
  }
@@ -41,7 +49,7 @@
    display: flex;
    border-radius: 2%;
    align-self: center;
-   background-color: #dfff2b;
+   background-color: var(--color-yellow);
    flex-direction: column;
    align-content: center;
    width: 17rem;
@@ -81,3 +89,74 @@
  }
 
 /**questions**/
+
+.container__questions{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: auto 0;
+  text-align: center;
+  background-color: var(--color-gray);
+}
+
+.container__questions__title{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 1rem 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 0.5rem 0 black;
+}
+
+.container__questions__img > img{
+  margin: 1rem 0;
+  width: 17rem;
+  height: 12rem;
+}
+
+.container__questions__answers{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.container__questions__answers__options{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin: 1rem 0;
+  width: 48%;
+  height: 4rem;
+  background-color: var(--color-blue);
+}
+
+.container__questions__answers__options:hover{
+  transition: all 0.1s;
+  background-color: #1c2892;
+}
+.container__questions__answers__options--false{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin: 1rem 0;
+  width: 48%;
+  height: 4rem;
+  background-color: var(--color-red);
+}
+
+.container__questions__answers__options--false:hover{
+  transition: all 0.1s;
+  background-color: #921c1c;
+}
+
+.container__questions__answers__icons{
+  display: flex;
+  color: white;
+  text-decoration: none;
+}
+
+.container__questions__answers__icons > img{
+  display: flex;
+  margin: 0 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
