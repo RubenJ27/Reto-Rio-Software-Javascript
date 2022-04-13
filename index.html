@@ -8,15 +8,16 @@
   <title>Reto Javascript Rio Software</title>
 </head>
 <body class="login__user">
-  <form class="name__user">
+  <form class="name__user" id="data_user">
     <div class="name__user__container">
       <h1 class="name__user__container__title">¿Que sabes sobre la naturaleza?</h1>
       <div class="name__user__container__inputs">
-        <input type="text" name="name__user" id="user" placeholder="Nombre de usuario">
-        <a href="primera-pregunta.html" id="submit">OK, go!</a>
-        <!-- <input type="submit" value="OK, go!" id="submit"> -->
+        <input type="text" name="name_user" id="user" placeholder="Nombre de usuario">
+        <!-- <a href="primera-pregunta.html" id="submit">OK, go!</a> -->
+        <input type="submit" value="OK, go!" id="submit" name="data_submit">
       </div>
     </div>
   </form>
 </body>
+<script src="js/index_dom.js" type="module"></script>
 </html>
