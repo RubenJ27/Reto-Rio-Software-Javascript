@@ -7,9 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <title>Reto Javascript Rio Software</title>
+  <script type="text/javascript">
+    function disableBack() {window.history.forward();}/* este metodo del objeto history solo funciona si existe una pagina siguiente a la que el usuario se encuentra, en este orden de ideas cuando el usuario avance a la pagina siguiente e intente volver a la pagina anterior no lo dejara, ya que si esta lo intenta siempre lo redirigira a la pagina actual en la que se encuentre*/
+    setTimeout("disableBack()", 0);/*Este setTimeout funciona para ejecutar la funcion disableBack() inmediatamente */
+    window.onunload = function () { null };/*este controlador de evento se activa o ejecuta una accion cuando el usuario ha abandonado la pagina web o cierra la misma, esto crea una funcion que contiene argumentos null*/
+  </script>
 </head>
 
-<body>
+<body onunload="window.alert('has salido')">
   <div class="container__questions">
     <div class="container__questions__title">
       <h2>¿Las plantas no son seres vivos?</h2>
