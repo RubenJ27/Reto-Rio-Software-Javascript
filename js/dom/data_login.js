@@ -21,7 +21,7 @@ export default function form_info(form) {
       location.href='primera-pregunta.html';
       $data_user = $form.name_user.value;
       st.setItem("$data_user", $data_user);
-      console.log("Segundo if")
+      console.log("Segundo if");
     }
   });  
 }

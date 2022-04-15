@@ -10,7 +10,6 @@ function scoreboar(params) {
   let questionsCorrect = d.querySelector(".answers__correct").innerHTML=`${correct} respuestas correctas`;
   let questionsIncorrect = d.querySelector(".answers__incorrect").innerHTML=`${incorrect} respuestas incorrecta`;
   let scoreboarNameUser = d.querySelector(".answers__login__name").innerHTML=`${nameUser}:`;
-  //console.log(scoreboarNameUser);
   console.log(`Preguntas incorrectas ${incorrect}`);
   console.log(`Preguntas correctas ${correct}`);  
 };

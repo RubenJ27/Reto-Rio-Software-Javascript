@@ -1,7 +1,7 @@
 const d = document,
 st = sessionStorage;
 
- function secondQuestion(params) {
+ function thirdQuestion(params) {
   let optionOne = d.getElementById("option__one");
   let optionTwo = d.getElementById("option__two");
   let optionThree = d.getElementById("option__three");
@@ -33,21 +33,21 @@ st = sessionStorage;
       st.getItem("optionReplyCorrectTotal");
       optionReplyIncorrectTotal++;
       st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal );
-      location.href='tercera-pregunta.html';
+      location.href='cuarta-pregunta.html';
     }
     if ((e.target === optionTwo && optionTwoReply === false) || e.target.matches(`${optionSelectorTwo} *`)) {
       optionReplyIncorrectTotal = st.getItem("optionReplyIncorrectTotal");
       st.getItem("optionReplyCorrectTotal");
       optionReplyIncorrectTotal++;
       st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
-      location.href='tercera-pregunta.html';
+      location.href='cuarta-pregunta.html';
      }
      if ((e.target === optionThree && optionThreeReply === true) || e.target.matches(`${optionSelectorThree} *`)) {
       optionReplyCorrectTotal = st.getItem("optionReplyCorrectTotal");
       st.getItem("optionReplyCorrectTotal");
       optionReplyCorrectTotal++;
       st.setItem("optionReplyCorrectTotal", optionReplyCorrectTotal);
-      location.href='tercera-pregunta.html';
+      location.href='cuarta-pregunta.html';
       //console.log(optionReplyIncorrectTotal);
      }
      if ((e.target === optionFour && optionFourReply === false) || e.target.matches(`${optionSelectorFour} *`)) {
@@ -55,9 +55,9 @@ st = sessionStorage;
       st.getItem("optionReplyCorrectTotal");
       optionReplyIncorrectTotal++;
       st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
-      location.href='tercera-pregunta.html';
+      location.href='cuarta-pregunta.html';
      }
   });
   
 }
-secondQuestion();
+thirdQuestion();
