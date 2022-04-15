@@ -1,7 +1,7 @@
 const d = document,
 st = sessionStorage;
 
- function fourthQuestion(params) {
+ function fifthQuestion(params) {
   let optionOne = d.getElementById("option__one");
   let optionTwo = d.getElementById("option__two");
   let optionThree = d.getElementById("option__three");
@@ -19,8 +19,8 @@ st = sessionStorage;
   st.setItem("counterNumQuestionCurrent", counterNumQuestionCurrent);
   let counterQuestions = d.querySelector(".container__counter__questions").innerHTML=`${counterNumQuestionCurrent}/${counterNumQuestionsTotal}`;
 
-  let optionOneReply = true;
-  let optionTwoReply = false;
+  let optionOneReply = false;
+  let optionTwoReply = true;
   let optionThreeReply = false;
   let optionFourReply = false;
 
@@ -28,36 +28,36 @@ st = sessionStorage;
   let optionReplyIncorrectTotal;
   console.log(counterNumQuestionCurrent);
   d.addEventListener("click", e => {
-    if ((e.target === optionOne && optionOneReply === true) || e.target.matches(`${optionSelectorOne} *`)) {
+    if ((e.target === optionOne && optionOneReply === false) || e.target.matches(`${optionSelectorOne} *`)) {
+      optionReplyIncorrectTotal = st.getItem("optionReplyIncorrectTotal");
+      st.getItem("optionReplyCorrectTotal");
+      optionReplyIncorrectTotal++;
+      st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
+      location.href='resultado-respuestas.html';
+    }
+    if ((e.target === optionTwo && optionTwoReply === true) || e.target.matches(`${optionSelectorTwo} *`)) {
       optionReplyCorrectTotal = st.getItem("optionReplyCorrectTotal");
       st.getItem("optionReplyCorrectTotal");
       optionReplyCorrectTotal++;
       st.setItem("optionReplyCorrectTotal", optionReplyCorrectTotal);
-      location.href='quinta-pregunta.html';
+      location.href='resultado-respuestas.html';
       //console.log(optionReplyIncorrectTotal);
-    }
-    if ((e.target === optionTwo && optionTwoReply === false) || e.target.matches(`${optionSelectorTwo} *`)) {
-      optionReplyIncorrectTotal = st.getItem("optionReplyIncorrectTotal");
-      st.getItem("optionReplyCorrectTotal");
-      optionReplyIncorrectTotal++;
-      st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
-      location.href='quinta-pregunta.html';
      }
-     if ((e.target === optionThree && optionThreeReply === true) || e.target.matches(`${optionSelectorThree} *`)) {
+     if ((e.target === optionThree && optionThreeReply === false) || e.target.matches(`${optionSelectorThree} *`)) {
       optionReplyIncorrectTotal = st.getItem("optionReplyIncorrectTotal");
       st.getItem("optionReplyCorrectTotal");
       optionReplyIncorrectTotal++;
       st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
-      location.href='quinta-pregunta.html';
+      location.href='resultado-respuestas.html';
      }
      if ((e.target === optionFour && optionFourReply === false) || e.target.matches(`${optionSelectorFour} *`)) {
       optionReplyIncorrectTotal = st.getItem("optionReplyIncorrectTotal");
       st.getItem("optionReplyCorrectTotal");
       optionReplyIncorrectTotal++;
       st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
-      location.href='quinta-pregunta.html';
+      location.href='resultado-respuestas.html';
      }
   });
   
 }
-fourthQuestion();
+fifthQuestion();
