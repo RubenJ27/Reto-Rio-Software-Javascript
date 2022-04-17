@@ -80,6 +80,8 @@
 }
 
  .name__user__container__inputs #submit{
+   display: flex;
+   align-items: center;
    cursor: pointer;
    text-decoration: none;
    margin: auto 0.5rem;
