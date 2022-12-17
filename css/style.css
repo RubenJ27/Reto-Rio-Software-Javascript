@@ -82,6 +82,8 @@
 }
 
  .name__user__container__inputs #submit{
+   display: flex;
+   align-items: center;
    cursor: pointer;
    text-decoration: none;
    margin: auto 0.5rem;
@@ -271,82 +273,3 @@
 .answers__incorrect{
   color: var(--color-red);
 }
-
-/* footer */
-
-.container__img__btn{
-  display: flex;
-  text-decoration: none;
-  width: 100%;
-  justify-content: center;
-  background: transparent;
-  margin-bottom: 1rem;
-}
-
-.container__img__btn-home{
-  width: 13%;
-  border-radius: 3%;
-  font-size: 0.8rem;
-  font-weight: bold;
-  padding: 0.8rem;
-  cursor: pointer;
-  justify-content: center;
-  background: var(--color-gray);
-  border: none;
-}
-.container__img__btn-home:hover{
-  background: #678983;
-  transition: all 0.5s;
-}
-
-.footer__bottom{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: var(--color-gray);
-  border-top: 1px solid #19220e;
-  padding: 21px 0;
-}
-
-.footer__bottom--answers{
-  background: white;
-  box-shadow: 0 0 0.5rem 0 black;
-  border: none;
-}
-
-.footer__bottom__container{
-   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  grid-gap: 35px;
-  width: 100%; 
-}
-
-.footer__bottom__container__row{
-  display: flex;
-  margin: 0 94px;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.footer__bottom__container__left__text{
-  color: var(--color-gray-text);
-}
-
-.footer__bottom__container__left__title{
-  color: var(--color-blue);
-  text-decoration: none;
-}
-
-
-.sub__nav__container__donate--footer{
-  margin-left: 1rem;
-}
-
-
-
-.footer__container__info,.footer__container__quick-links,.footer__container__upcoming-events,.footer__container__subscribe{
-  margin-top: 50px;
-}
-
