@@ -70,7 +70,11 @@
   display: flex;
   flex-direction: column;
  }
-
+ 
+ .login__user__input-text{
+  display: flex !important;
+  align-items: center;
+ }
  .name__user__container__inputs #user{
   border-radius: 3%;
   margin-bottom: 0.5rem;
