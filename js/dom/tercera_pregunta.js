@@ -21,8 +21,8 @@ st = sessionStorage;
   let counterQuestions = d.querySelector(".container__counter__questions").innerHTML=`${counterNumQuestionCurrent}/${counterNumQuestionsTotal}`;
 
   let optionOneReply = false;
-  let optionTwoReply = false;
-  let optionThreeReply = true;
+  let optionTwoReply = true;
+  let optionThreeReply = false;
   let optionFourReply = false;
 
   let optionReplyCorrectTotal;
@@ -36,20 +36,20 @@ st = sessionStorage;
       st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal );
       location.href='cuarta-pregunta.html';
     }
-    if ((e.target === optionTwo && optionTwoReply === false) || e.target.matches(`${optionSelectorTwo} *`)) {
-      optionReplyIncorrectTotal = st.getItem("optionReplyIncorrectTotal");
-      st.getItem("optionReplyCorrectTotal");
-      optionReplyIncorrectTotal++;
-      st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
-      location.href='cuarta-pregunta.html';
-     }
-     if ((e.target === optionThree && optionThreeReply === true) || e.target.matches(`${optionSelectorThree} *`)) {
+    if ((e.target === optionTwo && optionTwoReply === true) || e.target.matches(`${optionSelectorTwo} *`)) {
       optionReplyCorrectTotal = st.getItem("optionReplyCorrectTotal");
       st.getItem("optionReplyCorrectTotal");
       optionReplyCorrectTotal++;
       st.setItem("optionReplyCorrectTotal", optionReplyCorrectTotal);
       location.href='cuarta-pregunta.html';
       //console.log(optionReplyIncorrectTotal);
+     }
+     if ((e.target === optionThree && optionThreeReply === false) || e.target.matches(`${optionSelectorThree} *`)) {
+      optionReplyIncorrectTotal = st.getItem("optionReplyIncorrectTotal");
+      st.getItem("optionReplyCorrectTotal");
+      optionReplyIncorrectTotal++;
+      st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
+      location.href='cuarta-pregunta.html';
      }
      if ((e.target === optionFour && optionFourReply === false) || e.target.matches(`${optionSelectorFour} *`)) {
       optionReplyIncorrectTotal = st.getItem("optionReplyIncorrectTotal");

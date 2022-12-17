@@ -21,9 +21,9 @@ st = sessionStorage;
   let counterQuestions = d.querySelector(".container__counter__questions").innerHTML=`${counterNumQuestionCurrent}/${counterNumQuestionsTotal}`;
 
   let optionOneReply = false;
-  let optionTwoReply = true;
+  let optionTwoReply = false;
   let optionThreeReply = false;
-  let optionFourReply = false;
+  let optionFourReply = true;
 
   let optionReplyCorrectTotal;
   let optionReplyIncorrectTotal;
@@ -36,11 +36,11 @@ st = sessionStorage;
       st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
       location.href='resultado-respuestas.html';
     }
-    if ((e.target === optionTwo && optionTwoReply === true) || e.target.matches(`${optionSelectorTwo} *`)) {
-      optionReplyCorrectTotal = st.getItem("optionReplyCorrectTotal");
+    if ((e.target === optionTwo && optionTwoReply === false) || e.target.matches(`${optionSelectorTwo} *`)) {
+      optionReplyIncorrectTotal = st.getItem("optionReplyIncorrectTotal");
       st.getItem("optionReplyCorrectTotal");
-      optionReplyCorrectTotal++;
-      st.setItem("optionReplyCorrectTotal", optionReplyCorrectTotal);
+      optionReplyIncorrectTotal++;
+      st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
       location.href='resultado-respuestas.html';
       //console.log(optionReplyIncorrectTotal);
      }
@@ -51,11 +51,11 @@ st = sessionStorage;
       st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
       location.href='resultado-respuestas.html';
      }
-     if ((e.target === optionFour && optionFourReply === false) || e.target.matches(`${optionSelectorFour} *`)) {
-      optionReplyIncorrectTotal = st.getItem("optionReplyIncorrectTotal");
+     if ((e.target === optionFour && optionFourReply === true) || e.target.matches(`${optionSelectorFour} *`)) {
+      optionReplyCorrectTotal = st.getItem("optionReplyCorrectTotal");
       st.getItem("optionReplyCorrectTotal");
-      optionReplyIncorrectTotal++;
-      st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
+      optionReplyCorrectTotal++;
+      st.setItem("optionReplyCorrectTotal", optionReplyCorrectTotal);
       location.href='resultado-respuestas.html';
      }
   });

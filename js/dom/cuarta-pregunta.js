@@ -10,6 +10,7 @@ st = sessionStorage;
   let optionSelectorTwo = ".option__two";
   let optionSelectorThree = ".option__three";
   let optionSelectorFour = ".option__four";
+  console.log(optionSelectorThree);
   //todo: contador de preguntas dinamico para que se modifique dependiendo de cuantas preguntas queramos agregar mas facilmente*/
   let counterNumQuestionCurrent;
   let counterNumQuestionsTotal;
@@ -44,11 +45,11 @@ st = sessionStorage;
       st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
       location.href='quinta-pregunta.html';
      }
-     if ((e.target === optionThree && optionThreeReply === true) || e.target.matches(`${optionSelectorThree} *`)) {
-      optionReplyIncorrectTotal = st.getItem("optionReplyIncorrectTotal");
+     if ((e.target === optionThree && optionThreeReply === false) || e.target.matches(`${optionSelectorThree} *`)) {
+     optionReplyCorrectTotal = st.getItem("optionReplyCorrectTotal");
       st.getItem("optionReplyCorrectTotal");
-      optionReplyIncorrectTotal++;
-      st.setItem("optionReplyIncorrectTotal", optionReplyIncorrectTotal);
+      optionReplyCorrectTotal++;
+      st.setItem("optionReplyCorrectTotal", optionReplyCorrectTotal);
       location.href='quinta-pregunta.html';
      }
      if ((e.target === optionFour && optionFourReply === false) || e.target.matches(`${optionSelectorFour} *`)) {
